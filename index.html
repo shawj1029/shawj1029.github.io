@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shaw Jiang — Cosmology &amp; Large-Scale Structure</title>
+  <meta name="description" content="Personal homepage of Shaw Jiang, a cosmology and large-scale structure researcher at the University of Chicago." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ============ NAVBAR ============ -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">SJ</a>
+      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul id="nav-menu" class="nav-menu">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#research" class="nav-link">Research</a></li>
+        <li><a href="#publications" class="nav-link">Publications</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <section id="hero" class="hero">
+    <canvas id="star-canvas"></canvas>
+    <div class="hero-content fade-in">
+      <p class="hero-greeting">Hello, I'm</p>
+      <h1 class="hero-name">Shaw Jiang</h1>
+      <p class="hero-tagline">Exploring the Cosmos at the Largest Scales</p>
+      <p class="hero-affiliation">
+        <span class="affiliation-icon">🏛</span>
+        University of Chicago &middot; Department of Astronomy &amp; Astrophysics
+      </p>
+      <div class="hero-cta">
+        <a href="#research" class="btn btn-primary">My Research</a>
+        <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+      </div>
+    </div>
+    <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+      <div class="scroll-arrow"></div>
+    </a>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about" class="section about">
+    <div class="container">
+      <h2 class="section-title fade-in">About Me</h2>
+      <div class="about-grid fade-in">
+        <div class="about-portrait">
+          <div class="portrait-placeholder">
+            <span>SJ</span>
+          </div>
+        </div>
+        <div class="about-text">
+          <p>
+            I am a researcher at the <strong>University of Chicago</strong>, working at the intersection of
+            <strong>observational cosmology</strong> and <strong>large-scale structure</strong>. My work focuses
+            on understanding how matter is distributed across the universe and what this tells us about the
+            fundamental physics governing cosmic evolution.
+          </p>
+          <p>
+            Using data from wide-field galaxy surveys and advanced computational techniques, I study the cosmic
+            web — the vast network of filaments, walls, and voids that comprises the large-scale structure of
+            the universe. I am especially interested in PSF modeling, galaxy morphology, and the statistical
+            characterization of the matter distribution.
+          </p>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-value">UChicago</span>
+              <span class="stat-label">Affiliation</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value">Cosmology</span>
+              <span class="stat-label">Field</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value">LSS</span>
+              <span class="stat-label">Specialty</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RESEARCH ============ -->
+  <section id="research" class="section research">
+    <div class="container">
+      <h2 class="section-title fade-in">Research</h2>
+      <p class="section-subtitle fade-in">Key areas of my ongoing and past work</p>
+      <div class="research-grid">
+
+        <div class="research-card fade-in">
+          <div class="card-icon">🌌</div>
+          <h3>Large-Scale Structure</h3>
+          <p>
+            Mapping the cosmic web through galaxy surveys, studying filaments, voids, and
+            clusters to constrain cosmological parameters and understand structure formation.
+          </p>
+        </div>
+
+        <div class="research-card fade-in">
+          <div class="card-icon">🔭</div>
+          <h3>Galaxy Morphology &amp; Photometry</h3>
+          <p>
+            Developing advanced PSF subtraction and image processing pipelines for precise
+            galaxy photometry, enabling cleaner measurements of galaxy structural properties.
+          </p>
+        </div>
+
+        <div class="research-card fade-in">
+          <div class="card-icon">💫</div>
+          <h3>Cosmological Simulations</h3>
+          <p>
+            Running and analyzing N-body and hydrodynamic simulations (MDPL2, Uchuu, FLAMINGO)
+            to model the dark matter distribution and compare with observational data.
+          </p>
+        </div>
+
+        <div class="research-card fade-in">
+          <div class="card-icon">📊</div>
+          <h3>Statistical Methods</h3>
+          <p>
+            Applying Bayesian inference, MCMC sampling, Kernel Density Estimation, and Fourier
+            analysis techniques to extract cosmological information from noisy datasets.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PUBLICATIONS ============ -->
+  <section id="publications" class="section publications">
+    <div class="container">
+      <h2 class="section-title fade-in">Publications</h2>
+      <p class="section-subtitle fade-in">Selected works and preprints</p>
+      <ul class="pub-list fade-in">
+        <li class="pub-item">
+          <span class="pub-year">2026</span>
+          <div class="pub-info">
+            <h4>PSF Subtraction Pipeline for Wide-Field Galaxy Surveys</h4>
+            <p class="pub-authors">S. Jiang et al.</p>
+            <p class="pub-journal">In preparation</p>
+          </div>
+        </li>
+        <li class="pub-item">
+          <span class="pub-year">2025</span>
+          <div class="pub-info">
+            <h4>Characterizing the Cosmic Web with Density Field Reconstructions</h4>
+            <p class="pub-authors">S. Jiang et al.</p>
+            <p class="pub-journal">In preparation</p>
+          </div>
+        </li>
+        <li class="pub-item">
+          <span class="pub-year">—</span>
+          <div class="pub-info">
+            <h4>More publications coming soon…</h4>
+            <p class="pub-authors">Check back for updates or see my profiles below.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="section contact">
+    <div class="container">
+      <h2 class="section-title fade-in">Get in Touch</h2>
+      <p class="section-subtitle fade-in">Feel free to reach out for collaborations or questions</p>
+      <div class="contact-links fade-in">
+
+        <a href="mailto:shawjiang@uchicago.edu" class="contact-card" aria-label="Email">
+          <div class="contact-icon">✉️</div>
+          <span class="contact-label">Email</span>
+          <span class="contact-value">shawjiang@uchicago.edu</span>
+        </a>
+
+        <a href="https://github.com/shawjiang" target="_blank" rel="noopener" class="contact-card" aria-label="GitHub">
+          <div class="contact-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          </div>
+          <span class="contact-label">GitHub</span>
+          <span class="contact-value">shawjiang</span>
+        </a>
+
+        <a href="https://scholar.google.com/" target="_blank" rel="noopener" class="contact-card" aria-label="Google Scholar">
+          <div class="contact-icon">🎓</div>
+          <span class="contact-label">Google Scholar</span>
+          <span class="contact-value">Profile</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <p>&copy; 2026 Shaw Jiang &middot; University of Chicago</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
