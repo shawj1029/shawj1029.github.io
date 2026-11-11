@@ -37,6 +37,10 @@
     .ok { color: #1b7a3a; font-weight: 500; }
     .muted { color: var(--muted); }
     .todo { color: #a3a3a3; white-space: nowrap; cursor: default; }
+    #login input { font: inherit; padding: 6px 10px; border: 1px solid #bbb; border-radius: 4px; width: 240px; }
+    #login button { font: inherit; padding: 6px 14px; margin-left: 6px; border: 1px solid var(--text); background: var(--text);
+                     color: #fff; border-radius: 4px; cursor: pointer; }
+    .err { color: #b3261e; margin-top: 10px; }
     .group th { border-bottom: none; padding-bottom: 0; text-align: center; font-weight: 500; color: var(--muted); font-size: 13px; }
   </style>
 </head>
@@ -45,181 +49,49 @@
     <h1>Application status for recommenders</h1>
     <p class="muted" style="font-size:14px">Xiaoqi Jiang &middot; Ph.D. applications in astrophysics, Fall 2027 &middot; <a href="../">Home</a></p>
 
-    <div class="intro">
-      <p>Thank you for writing letters for me. This page lists every program, its deadline, and the statements I wrote for it,
-      so you can check what I said to each school. The last column lists the faculty I name in those statements.
-      Each portal sends you its own invitation by email.</p>
-      <p>The deadline is for the whole application. Letters are usually due the same day unless a note says otherwise.
-      Times are given when the school states them.</p>
-    </div>
-
-    <div class="sort">Sort by <button type="button" data-key="due" class="on">Deadline</button><button type="button" data-key="name">School name</button></div>
-
-    <div class="tbl">
-    <table>
-      <thead>
-        
-        <tr>
-          <th>School</th><th>Deadline</th><th>Days left</th><th>My statements</th><th>Faculty I mention</th>
-        </tr>
-      </thead>
-      <tbody>
-      <tr data-due="2026-11-22" data-name="ANU (RSAA)">
-        <td class="school"><strong>ANU (RSAA)</strong><div class="prog">PhD Astronomy &amp; Astrophysics, international scholarship round</div><div class="note">Letters use the <a href="docs/ANU_RSAA_Referee_Report_Form.docx">RSAA Referee Report Form</a>.</div></td>
-        <td class="dl">Sun, Nov 15, 2026<br><span class="muted">Letters: Sun, Nov 22, 2026</span></td>
-        <td class="days" data-due="2026-11-22"></td>
-        <td class="docs"><a href="docs/ANU_Personal_Statement_Xiaoqi_Jiang.pdf">Personal statement</a></td>
-        <td class="fac"><span class="fn">Christoph Federrath</span>, <span class="fn">Mark Krumholz</span>, <span class="fn">Roland Crocker</span></td>
-      </tr>
-      <tr data-due="2026-12-01" data-name="Harvard">
-        <td class="school"><strong>Harvard</strong><div class="prog">Astronomy PhD</div><div class="note">Note the 5 pm deadline.</div></td>
-        <td class="dl">Tue, Dec 1, 2026<br><span class="muted">5:00 pm ET</span></td>
-        <td class="days" data-due="2026-12-01"></td>
-        <td class="docs"><a href="docs/Harvard_SOP_Xiaoqi_Jiang.pdf">Statement of purpose</a></td>
-        <td class="fac"><span class="fn">Lars Hernquist</span>, <span class="fn">John ZuHone</span>, <span class="fn">Alexey Vikhlinin</span></td>
-      </tr>
-      <tr data-due="2026-12-01" data-name="UChicago">
-        <td class="school"><strong>UChicago</strong><div class="prog">Astronomy &amp; Astrophysics PhD</div></td>
-        <td class="dl">Tue, Dec 1, 2026<br><span class="muted">11:59 pm ET</span></td>
-        <td class="days" data-due="2026-12-01"></td>
-        <td class="docs"><a href="docs/UChicago_Statement_Xiaoqi_Jiang.pdf">Statement</a></td>
-        <td class="fac"><span class="fn">Nickolay Gnedin</span>, <span class="fn">Harley Katz</span>, <span class="fn">Irina Zhuravleva</span>, <span class="fn">Hsiao-Wen Chen</span></td>
-      </tr>
-      <tr data-due="2026-12-01" data-name="Maryland">
-        <td class="school"><strong>Maryland</strong><div class="prog">Astronomy PhD</div></td>
-        <td class="dl">Tue, Dec 1, 2026<br><span class="muted">ET</span></td>
-        <td class="days" data-due="2026-12-01"></td>
-        <td class="docs"><span class="todo">Statement of purpose</span><br><span class="todo">Research statement</span><br><span class="todo">Personal experience essays (1 to 3 short)</span></td>
-        <td class="fac"><span class="todo">&ndash;</span></td>
-      </tr>
-      <tr data-due="2026-12-01" data-name="Michigan">
-        <td class="school"><strong>Michigan</strong><div class="prog">Astronomy &amp; Astrophysics PhD</div><div class="note">Requires 2 letters.</div></td>
-        <td class="dl">Tue, Dec 1, 2026</td>
-        <td class="days" data-due="2026-12-01"></td>
-        <td class="docs"><span class="todo">Academic statement of purpose</span><br><span class="todo">Personal statement</span></td>
-        <td class="fac"><span class="todo">&ndash;</span></td>
-      </tr>
-      <tr data-due="2026-12-02" data-name="Columbia">
-        <td class="school"><strong>Columbia</strong><div class="prog">Astronomy PhD</div></td>
-        <td class="dl">Wed, Dec 2, 2026<br><span class="muted">11:59 pm ET</span></td>
-        <td class="days" data-due="2026-12-02"></td>
-        <td class="docs"><span class="todo">Statement of academic purpose</span><br><span class="todo">Personal statement</span></td>
-        <td class="fac"><span class="todo">&ndash;</span></td>
-      </tr>
-      <tr data-due="2026-12-02" data-name="UC San Diego">
-        <td class="school"><strong>UC San Diego</strong><div class="prog">Astronomy &amp; Astrophysics PhD</div></td>
-        <td class="dl">Wed, Dec 2, 2026</td>
-        <td class="days" data-due="2026-12-02"></td>
-        <td class="docs"><span class="todo">Statement of purpose</span><br><span class="todo">Short answers (optional)</span></td>
-        <td class="fac"><span class="todo">&ndash;</span></td>
-      </tr>
-      <tr data-due="2026-12-08" data-name="Cambridge (IoA)">
-        <td class="school"><strong>Cambridge (IoA)</strong><div class="prog">PhD Astronomy</div></td>
-        <td class="dl">Tue, Dec 8, 2026</td>
-        <td class="days" data-due="2026-12-08"></td>
-        <td class="docs"><span class="todo">Statement of interest</span></td>
-        <td class="fac"><span class="todo">&ndash;</span></td>
-      </tr>
-      <tr data-due="2026-12-10" data-name="UC Santa Cruz">
-        <td class="school"><strong>UC Santa Cruz</strong><div class="prog">Astronomy &amp; Astrophysics PhD</div></td>
-        <td class="dl">Thu, Dec 10, 2026</td>
-        <td class="days" data-due="2026-12-10"></td>
-        <td class="docs"><span class="todo">Statement of purpose</span><br><span class="todo">Personal history</span></td>
-        <td class="fac"><span class="todo">&ndash;</span></td>
-      </tr>
-      <tr data-due="2026-12-10" data-name="Ohio State">
-        <td class="school"><strong>Ohio State</strong><div class="prog">Astronomy PhD</div></td>
-        <td class="dl">Thu, Dec 10, 2026</td>
-        <td class="days" data-due="2026-12-10"></td>
-        <td class="docs"><span class="todo">Statement of intent</span></td>
-        <td class="fac"><span class="todo">&ndash;</span></td>
-      </tr>
-      <tr data-due="2026-12-11" data-name="Toronto">
-        <td class="school"><strong>Toronto</strong><div class="prog">Astronomy &amp; Astrophysics PhD</div><div class="note">The invitation goes to your institutional email.</div></td>
-        <td class="dl">Fri, Dec 11, 2026</td>
-        <td class="days" data-due="2026-12-11"></td>
-        <td class="docs"><a href="docs/Toronto_Research_Statement_Xiaoqi_Jiang.pdf">Research statement</a></td>
-        <td class="fac"><span class="fn">Norman Murray</span>, <span class="fn">Christopher Matzner</span></td>
-      </tr>
-      <tr data-due="2026-12-15" data-name="Yale">
-        <td class="school"><strong>Yale</strong><div class="prog">Astronomy PhD</div></td>
-        <td class="dl">Tue, Dec 15, 2026<br><span class="muted">11:59 pm ET</span></td>
-        <td class="days" data-due="2026-12-15"></td>
-        <td class="docs"><a href="docs/Yale_SOAP_Xiaoqi_Jiang.pdf">Statement of academic purpose</a></td>
-        <td class="fac"><span class="fn">Daisuke Nagai</span>, <span class="fn">Jeffrey Kenney</span>, <span class="fn">Héctor Arce</span></td>
-      </tr>
-      <tr data-due="2026-12-15" data-name="Princeton">
-        <td class="school"><strong>Princeton</strong><div class="prog">Astrophysical Sciences PhD</div></td>
-        <td class="dl">Tue, Dec 15, 2026<br><span class="muted">11:59 pm ET</span></td>
-        <td class="days" data-due="2026-12-15"></td>
-        <td class="docs"><a href="docs/Princeton_SOP_Xiaoqi_Jiang.pdf">Statement of purpose</a><br><span class="todo">Personal statement</span></td>
-        <td class="fac"><span class="fn">Eve Ostriker</span>, <span class="fn">Romain Teyssier</span></td>
-      </tr>
-      <tr data-due="2026-12-15" data-name="MIT">
-        <td class="school"><strong>MIT</strong><div class="prog">Physics PhD (astrophysics)</div></td>
-        <td class="dl">Tue, Dec 15, 2026<br><span class="muted">11:59 pm ET</span></td>
-        <td class="days" data-due="2026-12-15"></td>
-        <td class="docs"><a href="docs/MIT_SOP_Xiaoqi_Jiang.pdf">Statement of objectives</a><br><a href="docs/MIT_Personal_Statement_Xiaoqi_Jiang.pdf">Personal statement (optional)</a></td>
-        <td class="fac"><span class="fn">Mark Vogelsberger</span></td>
-      </tr>
-      <tr data-due="2026-12-15" data-name="Northwestern">
-        <td class="school"><strong>Northwestern</strong><div class="prog">Astronomy PhD</div><div class="note">Requires at least 2 letters.</div></td>
-        <td class="dl">Tue, Dec 15, 2026</td>
-        <td class="days" data-due="2026-12-15"></td>
-        <td class="docs"><a href="docs/Northwestern_Academic_Statement_Xiaoqi_Jiang.pdf">Academic statement</a><br><span class="todo">Personal statement</span></td>
-        <td class="fac"><span class="fn">Claude-André Faucher-Giguère</span>, <span class="fn">Wen-fai Fong</span>, <span class="fn">Allison Strom</span>, <span class="fn">Alexander Tchekhovskoy</span>, <span class="fn">Kung-Yi Su</span></td>
-      </tr>
-      <tr data-due="2026-12-15" data-name="Carnegie Mellon">
-        <td class="school"><strong>Carnegie Mellon</strong><div class="prog">Astronomy &amp; Astrophysics PhD</div></td>
-        <td class="dl">Tue, Dec 15, 2026</td>
-        <td class="days" data-due="2026-12-15"></td>
-        <td class="docs"><a href="docs/CMU_SOP_Xiaoqi_Jiang.pdf">Statement of purpose</a><br><a href="docs/CMU_Essay1_Xiaoqi_Jiang.html">Essay 1 (a research problem)</a><br><a href="docs/CMU_Essay2_Xiaoqi_Jiang.html">Essay 2 (research projects)</a></td>
-        <td class="fac"><span class="fn">Tiziana Di Matteo</span>, <span class="fn">Rupert Croft</span>, <span class="fn">Hy Trac</span></td>
-      </tr>
-      <tr data-due="2026-12-15" data-name="Johns Hopkins">
-        <td class="school"><strong>Johns Hopkins</strong><div class="prog">Astronomy &amp; Astrophysics PhD</div></td>
-        <td class="dl">Tue, Dec 15, 2026</td>
-        <td class="days" data-due="2026-12-15"></td>
-        <td class="docs"><a href="docs/JHU_SOP_Xiaoqi_Jiang.pdf">Statement of purpose</a><br><a href="docs/JHU_Personal_Statement_Xiaoqi_Jiang.pdf">Personal statement (optional)</a></td>
-        <td class="fac"><span class="fn">Molly Peeples</span>, <span class="fn">Jason Tumlinson</span></td>
-      </tr>
-      <tr data-due="2026-12-16" data-name="UC Santa Barbara">
-        <td class="school"><strong>UC Santa Barbara</strong><div class="prog">Physics PhD (astrophysics)</div></td>
-        <td class="dl">Wed, Dec 16, 2026<br><span class="muted">11:59 pm PT</span></td>
-        <td class="days" data-due="2026-12-16"></td>
-        <td class="docs"><span class="todo">Statement of purpose</span><br><span class="todo">Personal history</span></td>
-        <td class="fac"><span class="todo">&ndash;</span></td>
-      </tr>
-      <tr data-due="2026-12-21" data-name="UT Austin">
-        <td class="school"><strong>UT Austin</strong><div class="prog">Astronomy PhD</div></td>
-        <td class="dl">Mon, Dec 21, 2026</td>
-        <td class="days" data-due="2026-12-21"></td>
-        <td class="docs"><a href="docs/Austin_SOP_Xiaoqi_Jiang.pdf">Statement of purpose</a></td>
-        <td class="fac"><span class="fn">Stella Offner</span>, <span class="fn">Mike Boylan-Kolchin</span></td>
-      </tr>
-      <tr data-due="2027-01-01" data-name="Rutgers">
-        <td class="school"><strong>Rutgers</strong><div class="prog">Physics &amp; Astronomy PhD (astronomy)</div></td>
-        <td class="dl">Fri, Jan 1, 2027</td>
-        <td class="days" data-due="2027-01-01"></td>
-        <td class="docs"><a href="docs/Rutgers_Personal_Statement_Xiaoqi_Jiang.pdf">Personal statement</a></td>
-        <td class="fac"><span class="fn">Blakesley Burkhart</span></td>
-      </tr>
-      <tr data-due="9999-12-31" data-name="Oxford">
-        <td class="school"><strong>Oxford</strong><div class="prog">DPhil Astrophysics</div></td>
-        <td class="dl"><span class="muted">Early January 2027<br>(date not posted yet)</span></td>
-        <td class="days muted">&ndash;</td>
-        <td class="docs"><span class="todo">Statement of purpose</span></td>
-        <td class="fac"><span class="todo">&ndash;</span></td>
-      </tr>
-      </tbody>
-    </table>
-    </div>
-
-    <p class="note muted" style="margin-top:20px">Statements in grey are not finished yet and will be linked when they are.
-    The links always point to the latest version. Last updated November 10, 2026.</p>
+    <form id="login" hidden>
+      <p>This page is for my recommenders. Please enter the password I sent you.
+      You only need to do this once on each browser.</p>
+      <input id="pw" type="password" autocomplete="current-password" placeholder="Password" required>
+      <button type="submit">Open</button>
+      <p id="err" class="err" hidden>That password did not work. Please try again.</p>
+    </form>
+    <div id="content"></div>
   </div>
-
   <script>
+  const SALT = b64("KLucrKuFjNDWvG6eoOoSzA=="), ITER = 600000, DATA = "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", STORE = "xj-recommender-key";
+  function b64(s) { return Uint8Array.from(atob(s), c => c.charCodeAt(0)); }
+  async function aesKey(raw) { return crypto.subtle.importKey("raw", raw, "AES-GCM", false, ["decrypt"]); }
+  async function decrypt(key, buf) {
+    return new Uint8Array(await crypto.subtle.decrypt({ name: "AES-GCM", iv: buf.slice(0, 12) }, key, buf.slice(12)));
+  }
+  async function derive(pw) {
+    const base = await crypto.subtle.importKey("raw", new TextEncoder().encode(pw), "PBKDF2", false, ["deriveBits"]);
+    return new Uint8Array(await crypto.subtle.deriveBits({ name: "PBKDF2", salt: SALT, iterations: ITER, hash: "SHA-256" }, base, 256));
+  }
+  const MIME = { pdf: "application/pdf", html: "text/html;charset=utf-8",
+                 docx: "application/vnd.openxmlformats-officedocument.wordprocessingml.document" };
+  async function openPage(raw) {
+    const key = await aesKey(raw);
+    const page = new TextDecoder().decode(await decrypt(key, b64(DATA)));
+    document.getElementById("login").hidden = true;
+    document.getElementById("content").innerHTML = page;
+    init();
+    document.getElementById("forget").addEventListener("click", e => {
+      e.preventDefault(); localStorage.removeItem(STORE); location.reload();
+    });
+    document.querySelectorAll("#content a[data-fn]").forEach(a => a.addEventListener("click", async e => {
+      e.preventDefault();
+      const fn = a.dataset.fn, ext = fn.split(".").pop(), view = ext !== "docx";
+      const w = view ? window.open("", "_blank") : null;
+      const buf = new Uint8Array(await (await fetch(a.getAttribute("href"))).arrayBuffer());
+      const url = URL.createObjectURL(new Blob([await decrypt(key, buf)], { type: MIME[ext] || "application/octet-stream" }));
+      if (w) { w.location.href = url; }
+      else { const d = document.createElement("a"); d.href = url; d.download = fn; document.body.appendChild(d); d.click(); d.remove(); }
+    }));
+  }
+  function init() {
+
     const t = new Date(); t.setHours(0, 0, 0, 0);
     document.querySelectorAll('td.days[data-due]').forEach(td => {
       const [y, m, d] = td.dataset.due.split('-').map(Number);
@@ -239,6 +111,25 @@
         : (a.dataset.due.localeCompare(c.dataset.due) || a.dataset.i - c.dataset.i))
         .forEach(r => tbody.appendChild(r));
     }));
+  }
+  (async () => {
+    const saved = localStorage.getItem(STORE);
+    if (saved) {
+      try { await openPage(b64(saved)); return; } catch (e) { localStorage.removeItem(STORE); }
+    }
+    const form = document.getElementById("login");
+    form.hidden = false;
+    form.addEventListener("submit", async e => {
+      e.preventDefault();
+      const btn = form.querySelector("button"); btn.disabled = true;
+      try {
+        const raw = await derive(document.getElementById("pw").value);
+        await openPage(raw);
+        localStorage.setItem(STORE, btoa(String.fromCharCode(...raw)));
+      } catch (err) { document.getElementById("err").hidden = false; }
+      btn.disabled = false;
+    });
+  })();
   </script>
 </body>
 </html>
