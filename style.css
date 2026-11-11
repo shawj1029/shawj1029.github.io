@@ -1,21 +1,12 @@
 :root {
-  --bg: #fdfcfa;
-  --text: #222;
-  --muted: #6b6b6b;
+  color-scheme: light;
+  --bg: #ffffff;
+  --text: #111111;
+  --muted: #555555;
   --rule: #e4e1da;
   --accent: #1a4e8a;
   --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
   --sans: Inter, -apple-system, "Helvetica Neue", Arial, sans-serif;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #15171a;
-    --text: #e3e3e0;
-    --muted: #9a9a96;
-    --rule: #2c2f33;
-    --accent: #8ab4e8;
-  }
 }
 
 * { box-sizing: border-box; }
@@ -56,8 +47,9 @@ a:hover { text-decoration: underline; text-underline-offset: 2px; }
 }
 
 .avatar {
-  width: 140px;
-  height: 140px;
+  display: block;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 20px;
