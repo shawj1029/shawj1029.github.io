@@ -1,211 +1,158 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shaw Jiang — Cosmology &amp; Large-Scale Structure</title>
-  <meta name="description" content="Personal homepage of Shaw Jiang, a cosmology and large-scale structure researcher at the University of Chicago." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Xiaoqi Jiang</title>
+  <meta name="description" content="Xiaoqi Jiang. Astrophysics, numerical simulations, turbulence in the interstellar medium, and structure formation.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- ============ NAVBAR ============ -->
-  <nav id="navbar" class="navbar">
-    <div class="nav-container">
-      <a href="#hero" class="nav-logo">SJ</a>
-      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
-      </button>
-      <ul id="nav-menu" class="nav-menu">
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#research" class="nav-link">Research</a></li>
-        <li><a href="#publications" class="nav-link">Publications</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
+  <div class="page">
+
+    <aside class="sidebar">
+      <!-- To add a photo, put photo.jpg in this folder and uncomment the line below. -->
+      <!-- <img class="avatar" src="photo.jpg" alt="Xiaoqi Jiang"> -->
+      <h1 class="name">Xiaoqi Jiang</h1>
+      <p class="pron">pronounced <em>shyow-chee jyahng</em></p>
+      <p class="role">M.S. student, Data Science<br>The University of Chicago</p>
+      <p class="role">Visiting student, Astrophysical Sciences<br>Princeton University</p>
+
+      <ul class="links">
+        <li><a href="mailto:xqj@uchicago.edu">xqj@uchicago.edu</a></li>
+        <li><a href="CV_Xiaoqi_Jiang.pdf">CV (PDF)</a></li>
+        <li><a href="https://github.com/shawj1029">GitHub</a></li>
+        <!-- <li><a href="https://orcid.org/0000-0000-0000-0000">ORCID</a></li> -->
+        <!-- <li><a href="https://ui.adsabs.harvard.edu/">ADS</a></li> -->
       </ul>
-    </div>
-  </nav>
 
-  <!-- ============ HERO ============ -->
-  <section id="hero" class="hero">
-    <canvas id="star-canvas"></canvas>
-    <div class="hero-content fade-in">
-      <p class="hero-greeting">Hello, I'm</p>
-      <h1 class="hero-name">Shaw Jiang</h1>
-      <p class="hero-tagline">Exploring the Cosmos at the Largest Scales</p>
-      <p class="hero-affiliation">
-        <span class="affiliation-icon">🏛</span>
-        University of Chicago &middot; Department of Astronomy &amp; Astrophysics
-      </p>
-      <div class="hero-cta">
-        <a href="#research" class="btn btn-primary">My Research</a>
-        <a href="#contact" class="btn btn-secondary">Get in Touch</a>
-      </div>
-    </div>
-    <a href="#about" class="scroll-indicator" aria-label="Scroll down">
-      <div class="scroll-arrow"></div>
-    </a>
-  </section>
+      <nav class="toc">
+        <a href="#about">About</a>
+        <a href="#interests">Interests</a>
+        <a href="#research">Research</a>
+        <a href="#papers">Papers</a>
+        <a href="#education">Education</a>
+      </nav>
+    </aside>
 
-  <!-- ============ ABOUT ============ -->
-  <section id="about" class="section about">
-    <div class="container">
-      <h2 class="section-title fade-in">About Me</h2>
-      <div class="about-grid fade-in">
-        <div class="about-portrait">
-          <div class="portrait-placeholder">
-            <span>SJ</span>
-          </div>
-        </div>
-        <div class="about-text">
+    <main>
+
+      <section id="about">
+        <h2>About</h2>
+        <p>
+          I am an M.S. student in Data Science at the University of Chicago. Since August 2026 I have
+          been a visiting student in the Department of Astrophysical Sciences at Princeton University,
+          working with Dr. Chang-Goo Kim. I received my B.S. in Physics from Zhejiang University in 2025,
+          where I wrote my thesis with Prof. Renyue Cen.
+        </p>
+        <p>
+          I use numerical simulations to study how structure forms and evolves, from the turbulent gas
+          in galaxies to the cosmic web. I am applying to Ph.D. programs in astrophysics for Fall 2027.
+        </p>
+      </section>
+
+      <section id="interests">
+        <h2>Research interests</h2>
+        <p>
+          I am interested in the physics of structure formation across scales. I mainly work by building
+          and analyzing simulations, and I want to test them against observations. I am also interested in
+          connecting scales, for example using small-scale physics to set better priors for large-scale models.
+        </p>
+        <ul class="topics">
+          <li>Turbulence and stellar feedback in the multiphase interstellar medium</li>
+          <li>Feedback and self-regulation in galaxy formation</li>
+          <li>Gas in and around galaxies, from the ISM to the circumgalactic medium</li>
+          <li>Small-scale structure in &Lambda;CDM and the Local Universe</li>
+        </ul>
+      </section>
+
+      <section id="research">
+        <h2>Research</h2>
+
+        <article class="project">
+          <header>
+            <h3>Turbulence in the multiphase ISM</h3>
+            <span class="date">2026&ndash;present</span>
+          </header>
+          <p class="meta">Princeton University, with Dr. Chang-Goo Kim and Dr. Rajsekhar Mohapatra</p>
           <p>
-            I am a researcher at the <strong>University of Chicago</strong>, working at the intersection of
-            <strong>observational cosmology</strong> and <strong>large-scale structure</strong>. My work focuses
-            on understanding how matter is distributed across the universe and what this tells us about the
-            fundamental physics governing cosmic evolution.
+            I decompose the turbulence in the TIGRESS simulations of the star-forming ISM into compressive
+            and solenoidal modes with independent methods. I mask the hot gas before the decomposition to
+            isolate the turbulent modes of the warm and cold phases, and relate them to feedback and star formation.
           </p>
+        </article>
+
+        <article class="project">
+          <header>
+            <h3>Thin disks as a function of baryonic mass</h3>
+            <span class="date">2025&ndash;present</span>
+          </header>
+          <p class="meta">The University of Chicago, with Prof. Andrey Kravtsov</p>
           <p>
-            Using data from wide-field galaxy surveys and advanced computational techniques, I study the cosmic
-            web — the vast network of filaments, walls, and voids that comprises the large-scale structure of
-            the universe. I am especially interested in PSF modeling, galaxy morphology, and the statistical
-            characterization of the matter distribution.
+            I built a pipeline that cleans, deblends, and masks H&thinsp;<span class="sc">i</span>-selected
+            dwarf galaxies in deep imaging. I measure their shapes and model how disk thickness depends on
+            stellar mass, baryonic mass, and rotation velocity.
           </p>
-          <div class="about-stats">
-            <div class="stat">
-              <span class="stat-value">UChicago</span>
-              <span class="stat-label">Affiliation</span>
-            </div>
-            <div class="stat">
-              <span class="stat-value">Cosmology</span>
-              <span class="stat-label">Field</span>
-            </div>
-            <div class="stat">
-              <span class="stat-value">LSS</span>
-              <span class="stat-label">Specialty</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+        </article>
 
-  <!-- ============ RESEARCH ============ -->
-  <section id="research" class="section research">
-    <div class="container">
-      <h2 class="section-title fade-in">Research</h2>
-      <p class="section-subtitle fade-in">Key areas of my ongoing and past work</p>
-      <div class="research-grid">
-
-        <div class="research-card fade-in">
-          <div class="card-icon">🌌</div>
-          <h3>Large-Scale Structure</h3>
+        <article class="project">
+          <header>
+            <h3>Planar structures in &Lambda;CDM universes</h3>
+            <span class="date">2023&ndash;2026</span>
+          </header>
+          <p class="meta">With Prof. Renyue Cen, in collaboration with Prof. P. J. E. Peebles</p>
           <p>
-            Mapping the cosmic web through galaxy surveys, studying filaments, voids, and
-            clusters to constrain cosmological parameters and understand structure formation.
+            I developed a geometric probe for planar structures and used Local Group analogs in cosmological
+            <em>N</em>-body simulations to test how rare the observed local planar structures are in &Lambda;CDM.
           </p>
-        </div>
+        </article>
 
-        <div class="research-card fade-in">
-          <div class="card-icon">🔭</div>
-          <h3>Galaxy Morphology &amp; Photometry</h3>
+        <article class="project">
+          <header>
+            <h3>The quasar dipole in cosmological simulations</h3>
+            <span class="date">2026</span>
+          </header>
+          <p class="meta">Course project, Statistical Methods in Astrophysics</p>
           <p>
-            Developing advanced PSF subtraction and image processing pipelines for precise
-            galaxy photometry, enabling cleaner measurements of galaxy structural properties.
+            I built mock quasar skies for Local Group-like observers in large <em>N</em>-body simulations and
+            tested how unusual the observed quasar dipole and its misalignment with the CMB dipole are in &Lambda;CDM.
           </p>
-        </div>
+        </article>
+      </section>
 
-        <div class="research-card fade-in">
-          <div class="card-icon">💫</div>
-          <h3>Cosmological Simulations</h3>
-          <p>
-            Running and analyzing N-body and hydrodynamic simulations (MDPL2, Uchuu, FLAMINGO)
-            to model the dark matter distribution and compare with observational data.
-          </p>
-        </div>
+      <section id="papers">
+        <h2>Papers in preparation</h2>
+        <ul class="papers">
+          <li><strong>Jiang, X.</strong>, Cen, R., &amp; Peebles, P. J. E. Planar structures in &Lambda;CDM universes.</li>
+          <li><strong>Jiang, X.</strong> &amp; Kravtsov, A. The mass threshold for thin disks.</li>
+        </ul>
+      </section>
 
-        <div class="research-card fade-in">
-          <div class="card-icon">📊</div>
-          <h3>Statistical Methods</h3>
-          <p>
-            Applying Bayesian inference, MCMC sampling, Kernel Density Estimation, and Fourier
-            analysis techniques to extract cosmological information from noisy datasets.
-          </p>
-        </div>
+      <section id="education">
+        <h2>Education</h2>
+        <dl class="edu">
+          <dt>M.S. in Data Science, The University of Chicago</dt>
+          <dd>expected 2026</dd>
+          <dt>B.S. in Physics, Zhejiang University</dt>
+          <dd>2025</dd>
+        </dl>
+      </section>
 
-      </div>
-    </div>
-  </section>
+      <section id="other">
+        <h2>Teaching and talks</h2>
+        <ul class="plain">
+          <li>Teaching assistant, BIOS 21403 Quantitative Bioimaging, The University of Chicago <span class="date">2026</span></li>
+          <li>Poster, 27th Guo Shoujing Symposium on Galactic Cosmology <span class="date">2025</span></li>
+        </ul>
+        <p class="note">More details are in my <a href="CV_Xiaoqi_Jiang.pdf">CV</a>.</p>
+      </section>
 
-  <!-- ============ PUBLICATIONS ============ -->
-  <section id="publications" class="section publications">
-    <div class="container">
-      <h2 class="section-title fade-in">Publications</h2>
-      <p class="section-subtitle fade-in">Selected works and preprints</p>
-      <ul class="pub-list fade-in">
-        <li class="pub-item">
-          <span class="pub-year">2026</span>
-          <div class="pub-info">
-            <h4>PSF Subtraction Pipeline for Wide-Field Galaxy Surveys</h4>
-            <p class="pub-authors">S. Jiang et al.</p>
-            <p class="pub-journal">In preparation</p>
-          </div>
-        </li>
-        <li class="pub-item">
-          <span class="pub-year">2025</span>
-          <div class="pub-info">
-            <h4>Characterizing the Cosmic Web with Density Field Reconstructions</h4>
-            <p class="pub-authors">S. Jiang et al.</p>
-            <p class="pub-journal">In preparation</p>
-          </div>
-        </li>
-        <li class="pub-item">
-          <span class="pub-year">—</span>
-          <div class="pub-info">
-            <h4>More publications coming soon…</h4>
-            <p class="pub-authors">Check back for updates or see my profiles below.</p>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </section>
+      <footer>Last updated November 2026</footer>
+    </main>
 
-  <!-- ============ CONTACT ============ -->
-  <section id="contact" class="section contact">
-    <div class="container">
-      <h2 class="section-title fade-in">Get in Touch</h2>
-      <p class="section-subtitle fade-in">Feel free to reach out for collaborations or questions</p>
-      <div class="contact-links fade-in">
-
-        <a href="mailto:shawjiang@uchicago.edu" class="contact-card" aria-label="Email">
-          <div class="contact-icon">✉️</div>
-          <span class="contact-label">Email</span>
-          <span class="contact-value">shawjiang@uchicago.edu</span>
-        </a>
-
-        <a href="https://github.com/shawjiang" target="_blank" rel="noopener" class="contact-card" aria-label="GitHub">
-          <div class="contact-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-          </div>
-          <span class="contact-label">GitHub</span>
-          <span class="contact-value">shawjiang</span>
-        </a>
-
-        <a href="https://scholar.google.com/" target="_blank" rel="noopener" class="contact-card" aria-label="Google Scholar">
-          <div class="contact-icon">🎓</div>
-          <span class="contact-label">Google Scholar</span>
-          <span class="contact-value">Profile</span>
-        </a>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ FOOTER ============ -->
-  <footer class="footer">
-    <p>&copy; 2026 Shaw Jiang &middot; University of Chicago</p>
-  </footer>
-
-  <script src="script.js"></script>
+  </div>
 </body>
 </html>
