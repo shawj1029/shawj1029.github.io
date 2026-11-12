@@ -65,7 +65,7 @@ a:hover { text-decoration: underline; text-underline-offset: 2px; }
 
 .pron { color: var(--muted); margin: 0 0 20px; font-size: 13px; }
 
-.affil { margin: 0; }
+.affil { margin: 0; font-family: Roboto, -apple-system, "Helvetica Neue", Arial, sans-serif; }
 .org {
   display: grid;
   grid-template-columns: 22px 1fr;
@@ -103,10 +103,14 @@ strong, b { font-weight: 600; }
 
 main {
   min-width: 0;
-  font-family: Playfair, "STIX Two Text", Georgia, serif;
-  font-weight: 400;
-  letter-spacing: 0;
+  font-family: Roboto, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  font-weight: 500;
   font-variant-numeric: lining-nums;
+}
+main strong, main b { font-weight: 700; }
+main h2, main h3 {
+  font-family: Playfair, "STIX Two Text", Georgia, serif;
+  letter-spacing: 0;
 }
 
 section { margin-bottom: 44px; }
@@ -187,6 +191,7 @@ p { margin: 0 0 14px; }
 .note { color: var(--muted); }
 
 .sc { font-variant: small-caps; }
+.sym { font-family: "STIX Two Text", "Times New Roman", serif; }
 
 footer {
   font-size: 13px;
