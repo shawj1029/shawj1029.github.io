@@ -65,7 +65,7 @@ a:hover { text-decoration: underline; text-underline-offset: 2px; }
 
 .pron { color: var(--muted); margin: 0 0 20px; font-size: 13px; }
 
-.affil { margin: 0; }
+.affil { margin: 0; font-family: Roboto, -apple-system, "Helvetica Neue", Arial, sans-serif; font-weight: 450; }
 .org {
   display: grid;
   grid-template-columns: 22px 1fr;
@@ -101,7 +101,17 @@ strong, b { font-weight: 600; }
 
 /* main */
 
-main { min-width: 0; }
+main {
+  min-width: 0;
+  font-family: Roboto, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  font-weight: 450;
+  font-variant-numeric: lining-nums;
+}
+main strong, main b { font-weight: 600; }
+main h2, main h3 {
+  font-family: Playfair, "STIX Two Text", Georgia, serif;
+  letter-spacing: 0;
+}
 
 section { margin-bottom: 44px; }
 
@@ -117,8 +127,21 @@ h2 {
 
 p { margin: 0 0 14px; }
 
-.topics { margin: 8px 0 0; padding-left: 1.2em; }
-.topics li { margin-bottom: 4px; }
+.tags {
+  list-style: none;
+  padding: 0;
+  margin: 4px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.tags li {
+  font-size: 14.5px;
+  padding: 3px 12px;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  background: #f6f7f9;
+}
 
 .project { margin-bottom: 26px; }
 .project header {
@@ -128,7 +151,7 @@ p { margin: 0 0 14px; }
   gap: 16px;
 }
 .project h3 {
-  font-size: 19.5px;
+  font-size: 22px;
   letter-spacing: -0.015em;
   font-weight: 600;
   margin: 0;
@@ -148,14 +171,6 @@ p { margin: 0 0 14px; }
 .papers { padding-left: 1.2em; margin: 0; }
 .papers li { margin-bottom: 8px; }
 
-.edu {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 6px 16px;
-  margin: 0;
-}
-.edu dd { margin: 0; text-align: right; font-size: 14px; color: var(--muted); align-self: baseline; }
-
 .plain { list-style: none; padding: 0; margin: 0 0 14px; }
 .plain li {
   display: flex;
@@ -168,6 +183,7 @@ p { margin: 0 0 14px; }
 .note { color: var(--muted); }
 
 .sc { font-variant: small-caps; }
+.sym { font-family: "STIX Two Text", "Times New Roman", serif; }
 
 footer {
   font-size: 13px;
