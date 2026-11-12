@@ -101,7 +101,13 @@ strong, b { font-weight: 600; }
 
 /* main */
 
-main { min-width: 0; }
+main {
+  min-width: 0;
+  font-family: Playfair, "STIX Two Text", Georgia, serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  font-variant-numeric: lining-nums;
+}
 
 section { margin-bottom: 44px; }
 
@@ -117,8 +123,21 @@ h2 {
 
 p { margin: 0 0 14px; }
 
-.topics { margin: 8px 0 0; padding-left: 1.2em; }
-.topics li { margin-bottom: 4px; }
+.tags {
+  list-style: none;
+  padding: 0;
+  margin: 4px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.tags li {
+  font-size: 14.5px;
+  padding: 3px 12px;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  background: #f6f7f9;
+}
 
 .project { margin-bottom: 26px; }
 .project header {
