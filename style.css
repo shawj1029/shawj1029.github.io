@@ -109,7 +109,8 @@ main {
 }
 main strong, main b { font-weight: 600; }
 main h2, main h3 {
-  font-family: Playfair, "STIX Two Text", Georgia, serif;
+  font-family: "Sorts Mill Goudy", "STIX Two Text", Georgia, serif;
+  font-weight: 400;
   letter-spacing: 0;
 }
 
@@ -152,8 +153,8 @@ p { margin: 0 0 14px; }
 }
 .project h3 {
   font-size: 22px;
-  letter-spacing: -0.015em;
-  font-weight: 600;
+  letter-spacing: 0;
+  font-weight: 400;
   margin: 0;
 }
 .meta {
